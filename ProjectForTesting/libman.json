@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "pdfobject@2.2.5",
+      "destination": "lib/pdfobject/"
+    },
+    {
+      "library": "amcharts@3.21.15",
+      "destination": "lib/amcharts/"
+    }
+  ]
+}

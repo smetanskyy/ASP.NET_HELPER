@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/lib/amcharts/amcharts.js"></script>
+<script src="~/lib/amcharts/serial.js"></script>
+<script src="~/lib/amcharts/themes/dark.js"></script>
+
+<link href="~/Content/css/chart.css" rel="stylesheet" />
+<script src="~/Content/js/chart.js"></script>
+<div id="chartdiv"></div>
+
+<script>
+    $(document).ready(function () {
+        console.log($("a[title='JavaScript charts']"));
+        $("a[title='JavaScript charts']").css("display", "none");
+    });
+</script>
