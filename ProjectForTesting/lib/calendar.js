@@ -17,7 +17,7 @@ $(document).ready(function () {
     console.log("LOADED_DATE: " + SELECTED_DATE);
     updateCalendarUseDate(SELECTED_DATE.getFullYear(), SELECTED_DATE.getMonth(), SELECTED_DATE.getDate());
 
-    if (TAG_ID_SELECTED_DATE !== null && TAG_ID_SELECTED_DATE !== '') {
+    if (TAG_ID_SELECTED_DATE !== null && TAG_ID_SELECTED_DATE !== '' && IS_DISPLAY === false) {
         $(TAG_ID_SELECTED_DATE).click(function () {
             //$("#calendar-box-id").toggle();
             toggleCalendarBox();
@@ -154,7 +154,9 @@ function updateCalendarUseDate(year, month, day, changeTransDate = false) {
         console.log(`DATE: ${transDateString}`);
         console.log(`SELECTED_DATE: ${SELECTED_DATE}`);
         $(TAG_ID_SELECTED_DATE).val(transDateString);
-        $("#calendar-box-id").hide();
+        if (IS_DISPLAY === false) {
+            $("#calendar-box-id").hide();
+        }
     }
 
     $(".days-items-line").removeClass("active-days-items-line");
@@ -294,7 +296,7 @@ $(document).mouseup(function (e) {
         yearsWrap.hide();
     }
 
-    if (!calendarBox.is(e.target) && calendarBox.has(e.target).length === 0) {
+    if (!calendarBox.is(e.target) && calendarBox.has(e.target).length === 0 && IS_DISPLAY === false) {
         if (TAG_ID_SELECTED_DATE !== null && TAG_ID_SELECTED_DATE !== '') {
             if (!selectedTag.is(e.target) && selectedTag.has(e.target).length === 0) {
                 hideCalendarBox();

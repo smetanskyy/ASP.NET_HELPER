@@ -136,6 +136,7 @@
     <Content Include="Content\css\calendar.css" />
     <Content Include="Content\css\chart.css" />
     <Content Include="Content\css\donut.css" />
+    <Content Include="Content\css\email.css" />
     <Content Include="Content\js\chart.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -379,6 +380,7 @@
     <Content Include="Views\Home\Donut.cshtml" />
     <Content Include="Views\Home\Calendar.cshtml" />
     <Content Include="Views\Includes\calendar.cshtml" />
+    <Content Include="Views\Includes\email.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
