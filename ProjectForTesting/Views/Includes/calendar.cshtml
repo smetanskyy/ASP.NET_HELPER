@@ -1,4 +1,6 @@
-﻿<link href="/content/css/calendar.css" rel="stylesheet" />
+﻿@model ProjectForTesting.Models.CalendarModel
+
+<link href="/content/css/calendar.css" rel="stylesheet" />
 
 <script type="text/javascript">
     "use strict";
@@ -10,6 +12,10 @@
 
 @{
     var datedisplay = DateTime.Now;
+    if (Model != null && Model.Date != null) {
+        datedisplay = Model.Date;
+    }
+
     var monthdisplay = datedisplay.ToString("MMMM");
     var yeardisplay = datedisplay.Year;
     var listMonths = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames;
@@ -231,6 +237,10 @@
             const transDateString = $("#trans-data-to-front").attr("datetime");
             console.log(`DATE: ${transDateString}`);
             console.log(`SELECTED_DATE: ${SELECTED_DATE}`);
+
+            try {
+                $(TAG_ID_SELECTED_DATE).html(transDateString);
+            } catch (e) {}
         }
 
         $(".days-items-line").removeClass("active-days-items-line");

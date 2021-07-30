@@ -1,10 +1,20 @@
-﻿@{
+﻿@model ProjectForTesting.Models.ModelTest
+
+@{
     ViewBag.Title = "Calendar";
 }
 
 <h2>Calendar</h2>
+@{
+    var model = new ProjectForTesting.Models.CalendarModel();
+    model.Date = new DateTime(1988, 4, 24);
+}
 
-@Html.Include("calendar")
+<div id="selected-date-id" style="width: 150px; height: 30px; line-height: 30px;"></div>
+
+@Html.Include("calendar", model)
 
 <script>
+    let TAG_ID_SELECTED_DATE = "#selected-date-id";
+    console.log("SELECTED_DATE COOL :" + SELECTED_DATE);
 </script>
