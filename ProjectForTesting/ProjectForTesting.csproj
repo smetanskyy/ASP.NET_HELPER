@@ -337,6 +337,7 @@
     <Content Include="lib\amcharts\themes\light.js" />
     <Content Include="lib\amcharts\themes\patterns.js" />
     <Content Include="lib\amcharts\xy.js" />
+    <Content Include="lib\calendar.js" />
     <Content Include="lib\pdfobject\pdfobject.js" />
     <Content Include="lib\pdfobject\pdfobject.min.js" />
     <Content Include="Scripts\bootstrap.js" />

@@ -10,11 +10,20 @@
     model.Date = new DateTime(1988, 4, 24);
 }
 
-<div id="selected-date-id" style="width: 150px; height: 30px; line-height: 30px;"></div>
 
-@Html.Include("calendar", model)
+<div style="margin-left: 100px;">
+    <input style="width: 150px; height: 30px; line-height: 30px;" type="text" readonly placeholder="Enter date ... " id="selected-date-id" name="calendar-date" value="" />
 
+    @Html.Include("calendar", model)
+
+    <input style="margin-top: 20px; width: 150px; height: 30px; line-height: 30px;" type="text" readonly placeholder="Date 1" value="" />
+    <input style="margin-top: 20px; width: 150px; height: 30px; line-height: 30px;" type="text" readonly placeholder="Date 2" value="" />
+    <input style="margin-top: 20px; width: 150px; height: 30px; line-height: 30px;" type="text" readonly placeholder="Date 3" value="" />
+</div>
+
+<script src="/lib/calendar.js"></script>
 <script>
-    let TAG_ID_SELECTED_DATE = "#selected-date-id";
-    console.log("SELECTED_DATE COOL :" + SELECTED_DATE);
+    TAG_ID_SELECTED_DATE = "#selected-date-id";
+    IS_POSITION_ABSOLUTE = true;
+    MARGIN_TOP = 3;
 </script>

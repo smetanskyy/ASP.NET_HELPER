@@ -19,14 +19,15 @@
 }
 
 .calendar-box {
+    display: none;
     width: 407px;
     min-height: 384px;
     background: #FFFFFF;
     border: 1px solid #DADCDC;
-    box-sizing: border-box;
     border-radius: 4px;
     padding: 40px 20px 0;
     box-sizing: border-box;
+    z-index: 100;
 }
 
     .calendar-box * {
